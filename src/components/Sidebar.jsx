@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://soberpath-backend.onrender.com/api/v1/user/admin/logout", {
+      .get("http://localhost:4000/api/v1/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {

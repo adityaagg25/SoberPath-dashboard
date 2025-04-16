@@ -12,7 +12,7 @@ const Patients = () => {
     const fetchPatients = async () => {
       try {
         const { data } = await axios.get(
-          "https://soberpath-backend.onrender.com/api/v1/user/patients",
+          "http://localhost:4000/api/v1/user/patients",
           { withCredentials: true }
         );
         setPatients(data.patients);

@@ -26,7 +26,7 @@ const RegisterPatient = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://soberpath-backend.onrender.com/api/v1/user/patient/register",
+        "http://localhost:4000/api/v1/user/patient/register",
         { ...formData, role: "patient" },
         { withCredentials: true }
       );
