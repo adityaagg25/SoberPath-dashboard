@@ -22,7 +22,7 @@ const AddNewAdmin = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:4000/api/v1/user/admin/addnew",
+        "https://soberpath-backend.onrender.com/api/v1/user/admin/addnew",
         { firstName, lastName, email, phone, nic, dob, gender, password },
         {
           withCredentials: true,
