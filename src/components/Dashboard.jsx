@@ -14,7 +14,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "http://soberpath-backend.onrender.com/api/v1/appointment/getall",
+          "https://soberpath-backend.onrender.com/api/v1/appointment/getall",
           { withCredentials: true }
         );
         setAppointments(data.appointments);
@@ -26,7 +26,7 @@ const Dashboard = () => {
     const fetchDoctorCount = async () => {
       try {
         const { data } = await axios.get(
-          "http://soberpath-backend.onrender.com/api/v1/user/doctors",
+          "https://soberpath-backend.onrender.com/api/v1/user/doctors",
           { withCredentials: true }
         );
         setDoctorCount(data.doctors.length); // Update doctor count
@@ -42,7 +42,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://soberpath-backend.onrender.com/api/v1/appointment/update/${appointmentId}`,
+        `https://soberpath-backend.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );
